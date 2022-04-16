@@ -1,8 +1,9 @@
-import react from "react";
+import React from "react";
 import { BrowserRouter, Routes as Routers,Route} from "react-router-dom";
 
 import Login from './pages/Login';
-import Book from './pages/Book';
+import Books from './pages/Books';
+import NewBook from './pages/NewBook';
 
 
 export default function Routes() {
@@ -10,7 +11,8 @@ export default function Routes() {
             <BrowserRouter>
                 <Routers>
                     <Route exact path="/" element={<Login/>}/>
-                    <Route exact path="/book" element={<Book/>}/>
+                    <Route exact path="/books" element={<Books/>}/>
+                    <Route exact path="/books/new" element={<NewBook/>}/>
                 </Routers>
             </BrowserRouter>
     );
