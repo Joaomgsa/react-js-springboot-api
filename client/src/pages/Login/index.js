@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+
 import {useNavigate} from "react-router-dom";
 import './styles.css';
 
@@ -29,6 +30,8 @@ export default function Login() {
 
             localStorage.setItem('username', username);
             localStorage.setItem('accessToken', response.data.token);
+
+            navigate('/books');
             
         } catch (error) {
             alert('Falha no Login! Tente novamente');  
